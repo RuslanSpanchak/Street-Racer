@@ -1,0 +1,505 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrap {
+	width: 100%;
+	height: 100vh;
+
+	background-color: #00ff40;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	width: 330px;
+	height: 75px;
+
+	font-size: 50px;
+	font-weight: 900;
+	font-family: monospace;
+	color: white;
+
+	padding: 10px;
+	margin: 25px 0px;
+
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: black;
+	box-shadow: 0px 0px 15px #000;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	letter-spacing: -3px;
+
+	/*position: relative;
+	bottom: 90px;*/
+}
+
+.road_top {
+	width: 100%;
+	height: 5px;
+
+	background-color: #999;
+	box-shadow: 0px 0px 10px #000;
+
+	/*position: relative;
+	bottom: 125px;*/
+	
+}
+
+.margin_top {
+	margin-top: 25px;
+
+	/*position: relative;
+	bottom: 125px;*/
+}
+
+.road_top_black {
+	width: 100%;
+	height: 5px;
+
+	background-color: #333;
+
+	/*position: relative;
+	bottom: 125px;*/
+}
+
+.road_center {
+	width: 100%;
+	height: 275px;
+
+	background-color: #333;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+	margin-top: -0px;
+
+	/*position: relative;
+	bottom: 125px;*/
+}
+
+.road_marker {
+	display: flex;
+
+	margin-top: 140px;
+
+	/*position: fixed;
+	top: 250px;*/
+}
+
+.road_marker_item {
+	width: 250px;
+	height: 5px;
+
+	background-color: white;
+
+	margin: 0px 35px;
+}
+
+.control_panel {
+	width: 300px;
+	height: 175px;
+
+	background-color: lightgrey;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #000;
+
+	opacity: 1;
+
+	margin-top: 25px;
+	
+	/*bottom: 155px;*/
+}
+
+.control_panel_right {
+	width: 300px;
+	height: 175px;
+
+	background-color: darkgrey;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #000;
+
+	opacity: 1;
+
+	position: relative;
+	bottom: 170px;
+	left: 500px;
+
+	display: block;
+}
+
+.control_panel_row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/*margin: 25px 15px;*/
+}
+
+.icon_left_right {
+	width: 60px;
+	height: 60px;
+
+	margin: 20px 15px;
+
+	cursor: pointer;
+}
+
+.icon_reverse {
+	width: 60px;
+	height: 60px;
+
+	margin: 20px 15px;
+
+	cursor: pointer;
+}
+
+.icon_light {
+	width: 60px;
+	height: 60px;
+
+	margin: 5px 15px;
+
+	cursor: pointer;
+}
+
+.icon_light_active {
+	width: 60px;
+	height: 60px;
+
+	margin: 5px 15px;
+
+	cursor: pointer;
+
+	display: none;
+}
+
+.icon_light_color {
+	width: 60px;
+	height: 60px;
+
+	margin: 5px 15px;
+
+	cursor: pointer;
+}
+
+.icon_car {
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+	/*top: 75px;*/
+
+	margin-left: 25px;
+
+	transition: .1s linear
+}
+
+.icon_car_2 {
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+	/*top: 75px;*/
+
+	margin-left: 25px;
+
+	transition: .1s linear;
+
+	display: none;
+}
+
+.icon_car_3 {
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+/*	top: 75px;*/
+
+	margin-left: 25px;
+
+	transition: .1s linear;
+
+	display: none;
+}
+
+.icon_car_4 {
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+	/*top: 75px;*/
+
+	margin-left: 25px;
+
+	transition: .1s linear;
+
+	display: none;
+}
+
+.car_color {
+	display: none;
+
+	margin-top: 15px;
+}
+
+.car_color_right {
+	display: none;
+
+	margin-top: 10px;
+}
+
+.car_color_item {
+	width: 125px;
+	height: 125px;
+
+	padding: 25px 25px;
+	margin: 0px 15px;
+	/*position: relative;
+	top: 150px;*/
+
+	background-color: lightgrey;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #000;
+
+	cursor: pointer;
+	transition: .1s linear;
+}
+
+.car_color_item_right {
+	width: 125px;
+	height: 125px;
+
+	padding: 25px 25px;
+	margin: 0px 15px;
+	/*position: relative;
+	top: 150px;*/
+
+	background-color: darkgrey;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #000;
+
+	cursor: pointer;
+	transition: .1s linear;
+}
+
+.add_car {
+	position: fixed;
+	top: 25px;
+	right: 75px;
+
+	padding: 5px 15px;
+
+	background-color: darkblue;
+	border-radius: 10px;
+
+	font-size: 25px;
+	font-family: monospace;
+	color: white;
+
+	cursor: pointer;
+	transition: .1s linear;
+}
+
+.add_car:hover {
+	background-color: cadetblue;
+}
+
+.icon_car_top {
+	display: none;
+
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+/*	top: 0px;*/
+
+	margin-left: 25px;
+
+	transition: .5s linear
+}
+
+.icon_car_2_top {
+	display: none;
+
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+	/*top: 75px;*/
+
+	margin-left: 25px;
+
+	transition: .5s linear
+}
+
+.icon_car_3_top {
+	display: none;
+
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+/*	top: 75px*/;
+
+	margin-left: 25px;
+
+	transition: .5s linear
+}
+
+.icon_car_4_top {
+	display: none;
+
+	width: 125px;
+	height: 125px;
+
+	position: relative;
+	/*top: 75px;*/
+
+	margin-left: 25px;
+
+	transition: .5s linear
+}
+
+.red {
+	width: 10px;
+	height: 10px;
+
+	background-color: red;
+
+	position: absolute;
+	margin-top: 137px;
+	margin-left: 25px;
+
+	opacity: 0;	
+	filter: blur(1px);
+	transition: .3s linear;
+}
+
+.yellow {
+	width: 10px;
+	height: 3px;
+
+	background-color: yellow;
+
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 140px;
+
+	opacity: 0;	
+	filter: blur(1px);
+	transition: .3s linear;
+}
+
+.red_2 {
+	width: 10px;
+	height: 10px;
+
+	background-color: red;
+
+	/*position: relative;
+	top: 139px;
+	left: 25px;*/
+
+	opacity: 0;	
+	filter: blur(1px);
+	transition: .3s linear;
+}
+
+.yellow_2 {
+	width: 10px;
+	height: 5px;
+
+	background-color: yellow;
+
+	/*position: relative;
+	top: 13px;
+	left: 140px;*/
+
+	opacity: 0;	
+	filter: blur(1px);
+	transition: .3s linear;
+}
+
+.red_3 {
+	width: 10px;
+	height: 10px;
+
+	background-color: red;
+
+	/*position: relative;
+	top: 139px;
+	left: 25px;*/
+
+	opacity: 0;	
+	filter: blur(2px);
+	transition: .3s linear;
+}
+
+.yellow_3 {
+	width: 10px;
+	height: 5px;
+
+	background-color: yellow;
+
+	/*position: relative;
+	top: 13px;
+	left: 140px;*/
+
+	opacity: 0;	
+	filter: blur(3px);
+	transition: .3s linear;
+}
+
+.red_4 {
+	width: 10px;
+	height: 10px;
+
+	background-color: red;
+
+	/*position: relative;
+	top: 139px;
+	left: 25px;*/
+
+	opacity: 0;	
+	filter: blur(2px);
+	transition: .3s linear;
+}
+
+.yellow_4 {
+	width: 10px;
+	height: 5px;
+
+	background-color: yellow;
+
+	/*position: relative;
+	top: 13px;
+	left: 140px;*/
+
+	opacity: 0;	
+	filter: blur(3px);
+	transition: .3s linear;
+}
+
+.dark_mode {
+	width: 50px;
+	height: 50px;
+
+	position: fixed;
+	top: 20px;
+	right: 15px;
+
+	cursor: pointer;
+}
+
